@@ -204,46 +204,6 @@
 
                 <section>
                     <section>
-                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Groovy+plugin">Groovy</a></h2>
-                        <ul>
-                            <li>allows for execution of groovy code</li>
-                            <li>
-                                2 types of build steps:
-                                <ul>
-                                    <li>
-                                        groovy scripts
-                                        <ul>
-                                            <li>
-                                                run in the slave's JVM
-                                            </li>
-                                            <li>
-                                                like running <code data-trim contenteditable>groovy</code> command with a script
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        system groovy scripts
-                                        <ul>
-                                            <li>
-                                                run inside master's JVM
-                                            </li>
-                                            <li>
-                                                have access to all the internal objects of Jenkins and can alter its state
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                    <section>
-                        <img data-src="img/groovy.png" />
-                    </section>
-                </section>
-
-
-                <section>
-                    <section>
                         <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Email-ext+plugin">Email Extension</a></h2>
                         <ul>
                             <li>controls all aspects of email notifications</li>
@@ -455,33 +415,341 @@
 
                 <section>
                     <section>
-                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Embeddable+Build+Status+Plugin"></a></h2>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Combinations+Plugin">Matrix Combinations</a></h2>
+                        <ul>
+                            <li>allows the user to dynamically choose combinations to run in a matrix job</li>
+                            <li>introduces a <i>Matrix Combinations</i> parameter type</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/matrix-combinations-config.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/matrix-combinations-select.png" />
+                    </section>
+                </section>
+
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Groovy+plugin">Groovy</a></h2>
+                        <ul>
+                            <li>allows for execution of groovy code</li>
+                            <li>
+                                2 types of build steps:
+                                <ul>
+                                    <li>
+                                        groovy scripts
+                                        <ul>
+                                            <li>
+                                                run in the slave's JVM
+                                            </li>
+                                            <li>
+                                                like running <code data-trim contenteditable>groovy</code> command with a script
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        system groovy scripts
+                                        <ul>
+                                            <li>
+                                                run inside master's JVM
+                                            </li>
+                                            <li>
+                                                have access to all the internal objects of Jenkins and can alter its state
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/groovy.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Plot+Plugin">Plot</a></h2>
+                        <ul>
+                            <li>outputs simple charts (plots) from builds</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>generating reports</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/plot.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/slaves.png" />
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Job+Restrictions+Plugin">Job Restrictions</a></h2>
+                        <ul>
+                            <li>restricts how builds can be triggered and where they can run</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>private nodes</li>
+                                    <li>exclusively automatic builds</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/restriction.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Ownership+Plugin">Ownership</a></h2>
+                        <ul>
+                            <li>introduces concept of owners of jobs and slaves</li>
+                            <li>includes:
+                                <ul>
+                                    <li>ownership-based security (via <a href="https://wiki.jenkins-ci.org/display/JENKINS/Role+Strategy+Plugin">Role Strategy</a> and <a href="https://wiki.jenkins-ci.org/display/JENKINS/Job+Restrictions+Plugin">Job Restrictions</a> plugins)</li>
+                                    <li>email configuration</li>
+                                    <li>summaries</li>
+                                    <li>reasonable default assignments</li>
+                                </ul>
+                            </li>
+                            <li>use cases:
+                                <ul>
+                                    <li>find out who is in charge of a job</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/ownership.png" />
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
                         <ul>
                             <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
                         </ul>
                     </section>
                     <section>
                         <img data-src="img/embeddable-build-status.png" />
                     </section>
                 </section>
-
                 <section>
                     <section>
-                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Embeddable+Build+Status+Plugin"></a></h2>
+                        <h2><a href=""></a></h2>
                         <ul>
                             <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
                         </ul>
                     </section>
                     <section>
                         <img data-src="img/embeddable-build-status.png" />
                     </section>
                 </section>
-
                 <section>
                     <section>
-                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Embeddable+Build+Status+Plugin"></a></h2>
+                        <h2><a href=""></a></h2>
                         <ul>
                             <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href=""></a></h2>
+                        <ul>
+                            <li></li>
+                            <li>use cases:
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
                         </ul>
                     </section>
                     <section>
