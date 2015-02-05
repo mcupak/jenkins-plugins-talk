@@ -50,7 +50,7 @@
                         <small><a href="https://twitter.com/mirocupak">@mirocupak</a></small>
                     </p>
                     <p>
-                        <small>07/02/2015</small>
+                        <small>2015-02-07</small>
                     </p>
                 </section>
 
@@ -79,10 +79,8 @@
                         <ul>
                             <li>638 organization members on GitHub</li>
                             <li>375 committers</li>
-                            <li>100K active installations</li>
-                            <li>300K active nodes</li>
-                            <li>3.2M total plugin installations</li>
-                            <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Plugins">1050</a> unique plugins</li>
+                            <li>100K active installations with 300K nodes</li>
+                            <li>3.2M installations of <a href="https://wiki.jenkins-ci.org/display/JENKINS/Plugins">1050</a> unique plugins</li>
                         </ul>
                         <p class="fragment">
                             <br/>
@@ -92,19 +90,403 @@
                         </p>
                     </section>
                 </section>
-                
+
                 <section>
-                    <h2>Jenkins</h2>
-                    <ul>
-                        <li>most widely used CI in the world</li>
-                    </ul>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Dashboard+View">Dashboard View</a></h2>
+                        <ul>
+                            <li>view implementation containing portlets (well, sort of...)</li>
+                            <!--<li>visualization Jenkins data</li>-->
+                            <li>easy to extend</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/dashboard.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/dashboard-all.png" />
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Jenkins</h2>
-                    <ul>
-                        <li>most widely used CI in the world</li>
-                    </ul>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/JobConfigHistory+Plugin">Job Configuration History</a></h2>
+                        <ul>
+                            <li>versioning of job and system configuration</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/jobconfighistory.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/jobconfighistory-diff.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Publisher+Plugin">Build Publisher</a></h2>
+                        <ul>
+                            <li>sends builds to another Jenkins master over HTTP</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>
+                                        public facing instance for community projects</li>
+                                    <li>
+                                        aggregation of data among teams
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/build-publisher.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/build-publisher-config.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Disk+Usage+Plugin">Disk Usage</a></h2>
+                        <ul>
+                            <li>periodically calculates disk space occupied by jobs</li>
+                            <li>beware of performance impact!</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/disk-usage.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/disk-usage-job.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Embeddable+Build+Status+Plugin">Embeddable Build Status</a></h2>
+                        <ul>
+                            <li>exposes current build status as an image</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin">Environment Injector</a></h2>
+                        <ul>
+                            <li>manages environment variables for jobs and nodes</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>set up clean environment for nodes</li>
+                                    <li>inject variables based on user parameter values</li>
+                                    <li>initialization before SCM checkout</li>
+                                    <li>know environment variables used for a build</li>
+                                    <li>inject environment variables from the evaluation of a Groovy script</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/envinject-node.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/envinject-job.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/envinject-build.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Groovy+plugin">Groovy</a></h2>
+                        <ul>
+                            <li>allows for execution of groovy code</li>
+                            <li>
+                                2 types of build steps:
+                                <ul>
+                                    <li>
+                                        groovy scripts
+                                        <ul>
+                                            <li>
+                                                run in the slave's JVM
+                                            </li>
+                                            <li>
+                                                like running <code data-trim contenteditable>groovy</code> command with a script
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        system groovy scripts
+                                        <ul>
+                                            <li>
+                                                run inside master's JVM
+                                            </li>
+                                            <li>
+                                                have access to all the internal objects of Jenkins and can alter its state
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/groovy.png" />
+                    </section>
+                </section>
+
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Email-ext+plugin">Email Extension</a></h2>
+                        <ul>
+                            <li>controls all aspects of email notifications</li>
+                            <li>provides extensive content, triggers and recipients options</li>
+                            <li>supports attachments</li>
+                            <li>supports pre-send scripts in Jelly and Groovy</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>Mailer</p>
+                        <img data-src="img/mailer.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/email-ext.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/email-ext-triggers.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/email-ext-email.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Timestamper">Timestamper</a></h2>
+                        <ul>
+                            <li>adds timestamps to console output</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/timestamper.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Folders+Plugin">CloudBees Folders</a></h2>
+                        <ul>
+                            <li>organizes jobs into hierarchical folders (think file system)</li>
+                            <li>better grouping capabilities than <a href="https://wiki.jenkins-ci.org/display/JENKINS/Nested+View+Plugin">Nested View</a> and others</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/folders.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build-timeout+Plugin">Build Timeout</a></h2>
+                        <ul>
+                            <li>automatically aborts a build if it's taking too long</li>
+                            <li><i>usually</i> works</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/build-timeout.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/NodeLabel+Parameter+Plugin">Node Label Parameter</a></h2>
+                        <ul>
+                            <li>allows you to dynamically select the node where a job should run (without having to change the job configuration)</li>
+                            <li>supports parallel builds</li>
+                            <li>
+                                exposes 2 parameter types:
+                                <ul>
+                                    <li>node</li>
+                                    <li>label</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/nodelabel.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Workspace+Cleanup+Plugin">Workspace Cleanup</a></h2>
+                        <ul>
+                            <li>removes data from the workspace before/after a build</li>
+                            <li>
+                                use to:
+                                <ul>
+                                    <li>save disk space</li>
+                                    <li>start builds with a "clean slate"</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/workspace-cleanup.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/HTML+Publisher+Plugin">HTML Publisher</a></h2>
+                        <ul>
+                            <li>publishes HTML reports to job/build pages</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/html-publisher.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/html-publisher-job.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/html-publisher-report.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Multiple+SCMs+Plugin">Multiple SCMs</a></h2>
+                        <ul>
+                            <li>allows jobs to check out sources from multiple SCM providers</li>
+                            <li>
+                                use cases:
+                                <ul>
+                                    <li>dealing with third-party libraries</li>
+                                    <li>storing (f)tests separately from the application code</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/multiple-scms.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/URLTrigger+Plugin">URL Trigger</a></h2>
+                        <ul>
+                            <li>polls given URLs for changes and triggers a build after a change is detected</li>
+                            <li>only HTTP(S), other protocols included in <a href="https://wiki.jenkins-ci.org/display/JENKINS/XTrigger+Plugin">XTrigger</a></li>
+                            <li>supports:
+                                <ul>
+                                    <li>plain text responses (regular expressions)</li>
+                                    <li>XML responses (XPath)</li>
+                                    <li>JSON responses (JsonPath)</li>
+                                    <li>generic content (MD5)</li>
+                                </ul>
+                            </li>
+                            <li>use cases:
+                                <ul>
+                                    <li>check if an artifact was deployed in a repository</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/url-trigger.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Project+Plugin">Matrix Project</a></h2>
+                        <ul>
+                            <li>supports multi-configuration (matrix) project type</li>
+                            <li>used to be a part of Jenkins core, now a bundled plugin</li>
+                            <li>essentially a parametrized job running all combinations of parameters</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>release testing against several platforms</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/matrix-conf.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/matrix-console.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/matrix-result.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Reloaded+Plugin">Matrix Reloaded</a></h2>
+                        <ul>
+                            <li>rebuilds parts of matrix builds</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>rerunning false negatives</li>
+                                    <li>testing on a core subset of supported platforms</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/matrix-reloaded-menu.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/matrix-reloaded-matrix.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Embeddable+Build+Status+Plugin"></a></h2>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Embeddable+Build+Status+Plugin"></a></h2>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Embeddable+Build+Status+Plugin"></a></h2>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/embeddable-build-status.png" />
+                    </section>
                 </section>
 
                 <section>
