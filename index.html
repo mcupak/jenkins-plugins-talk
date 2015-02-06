@@ -47,7 +47,7 @@
                         <a href="https://twitter.com/mirocupak">Miro Cupak</a> (<a href="http://dnastack.com">DNAstack</a>)
                     </p>
                     <p>
-                        <small><a href="https://twitter.com/mirocupak">@mirocupak</a></small>
+                        <small><img style=" background: none; border: none; box-shadow: none; margin:0;" height="25" data-src="img/twitter.png" alt="Twitter"> <a href="https://twitter.com/mirocupak">@mirocupak</a></small>
                     </p>
                     <p>
                         <small>2015-02-07</small>
@@ -120,6 +120,24 @@
                     </section>
                     <section>
                         <img data-src="img/jobconfighistory-diff.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Audit+Trail+Plugin">Audit trail</a></h2>
+                        <ul>
+                            <li>records who performed a particular operation and when (e.g. creating/configuring/deleting jobs and views or deleting/starting builds)</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>auditing</li>
+                                    <li>recovery from backup</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/audit-trail.png" />
                     </section>
                 </section>
 
@@ -488,7 +506,7 @@
                         <img data-src="img/slaves.png" />
                     </section>
                 </section>
-                
+
                 <section>
                     <section>
                         <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Job+Restrictions+Plugin">Job Restrictions</a></h2>
@@ -531,101 +549,184 @@
                         <img data-src="img/ownership.png" />
                     </section>
                 </section>
-                
+
                 <section>
                     <section>
-                        <h2><a href=""></a></h2>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a></h2>
                         <ul>
-                            <li></li>
+                            <li>rebuilds a parameterized build with the same parameters</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/rebuild.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/rebuild-params.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Parameterized+Trigger+Plugin">Parameterized Trigger</a></h2>
+                        <ul>
+                            <li>extension of out-of-the-box upstream-downstream job relationship</li>
+                            <li>provides job chaining with parameter passing</li>
+                            <li>builds can be triggered from:
+                                <ul>
+                                    <li>post-build actions</li>
+                                    <li>build steps</li>
+                                </ul>
+                            </li>
+                            <li>supports matrix jobs</li>
                             <li>use cases:
                                 <ul>
-                                    <li></li>
+                                    <li>using "trigger jobs"</li>
+                                    <li>modeling simple workflows</li>
                                 </ul>
                             </li>
                         </ul>
                     </section>
                     <section>
-                        <img data-src="img/embeddable-build-status.png" />
+                        <img data-src="img/parameterized-trigger.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/parameterized-trigger-build.png" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="">Workflow</a></h2>
+                        <ul>
+                            <li>allows you to write complex workflows in Groovy with an embedded DSL</li>
+                            <li>forget <a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Flow+Plugin">Build Flow</a> and <a href="https://wiki.jenkins-ci.org/display/JENKINS/Join+Plugin">Join</a> plugins</li>
+                            <li>introduces a new <i>workflow</i> job type</li>
+                            <li>collection of plugins</li>
+                            <li>supports:
+                                <ul>
+                                    <li>more or less all core job-related stuff (triggers, parameters, SCM, artifacts...)</li>
+                                    <li>durable pipelines</li>
+                                    <li>concurrency throttling via pipeline stages</li>
+                                    <li>allocation of slaves and workspaces</li>
+                                    <li>human input integrated into flows</li>
+                                    <li>sandboxing via <a href="https://wiki.jenkins-ci.org/display/JENKINS/Script+Security+Plugin">Script Security</a> plugin</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/workflow.png" />
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2><a href=""></a></h2>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Description+Setter+Plugin">Description Setter</a></h2>
                         <ul>
-                            <li></li>
+                            <li>sets the description for a build</li>
+                            <li>uses a regular expression to find a line in the console log</li>
                             <li>use cases:
                                 <ul>
-                                    <li></li>
+                                    <li>tagging builds with a release version</li>
                                 </ul>
                             </li>
                         </ul>
                     </section>
                     <section>
-                        <img data-src="img/embeddable-build-status.png" />
+                        <img data-src="img/description.png" />
+                        <img data-src="img/description-history.png" />
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2><a href=""></a></h2>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Authorization+Strategy+Plugin">Matrix Authorization Strategy</a></h2>
                         <ul>
-                            <li></li>
-                            <li>use cases:
-                                <ul>
-                                    <li></li>
-                                </ul>
-                            </li>
+                            <li>provides matrix-based security authorization strategies</li>
+                            <li>global and per-project security</li>
+                            <li>reasonable default authorization model</li>
                         </ul>
                     </section>
                     <section>
-                        <img data-src="img/embeddable-build-status.png" />
+                        <img data-src="img/authz.png" />
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2><a href=""></a></h2>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Implied+Labels+Plugin">Implied Labels</a></h2>
                         <ul>
-                            <li></li>
+                            <li>recognizes implication rules to infer node labels</li>
                             <li>use cases:
                                 <ul>
-                                    <li></li>
+                                    <li>need to manage large number of slaves</li>
                                 </ul>
                             </li>
                         </ul>
                     </section>
                     <section>
-                        <img data-src="img/embeddable-build-status.png" />
+                        <img data-src="img/implied-labels.png" />
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2><a href=""></a></h2>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls">Green Balls</a></h2>
                         <ul>
-                            <li></li>
-                            <li>use cases:
-                                <ul>
-                                    <li></li>
-                                </ul>
-                            </li>
+                            <li>changes colors of Jenkins status indicators from blue to green</li>
                         </ul>
                     </section>
                     <section>
-                        <img data-src="img/embeddable-build-status.png" />
+                        <img data-src="img/green-balls.png" />
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2><a href=""></a></h2>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Copy+To+Slave+Plugin">Copy To Slave</a></h2>
                         <ul>
-                            <li></li>
+                            <li>transfers data between the master's file system and jobs' workspaces</li>
                             <li>use cases:
                                 <ul>
-                                    <li></li>
+                                    <li>central repository of tools/configuration on a master node</li>
                                 </ul>
                             </li>
                         </ul>
                     </section>
                     <section>
-                        <img data-src="img/embeddable-build-status.png" />
+                        <img data-src="img/copy-to-slave.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Copy+Artifact+Plugin#CopyArtifactPlugin-PluginInformation">Copy Artifact</a></h2>
+                        <ul>
+                            <li>copies an artifact from another build/job into the current build's workspace</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>using latest versions of components built elsewhere</li>
+                                    <li>simple workflows</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/copy-artifact.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2><a href="https://wiki.jenkins-ci.org/display/JENKINS/Priority+Sorter+Plugin">Priority Sorter</a></h2>
+                        <ul>
+                            <li>queues jobs according to their priorities</li>
+                            <li>the lower the priority, the sooner the job runs</li>
+                            <li>use cases:
+                                <ul>
+                                    <li>environment with many jobs and limited hardware</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img data-src="img/job-priorities.png" />
+                    </section>
+                    <section>
+                        <img data-src="img/priority-sorter.png" />
                     </section>
                 </section>
                 <section>
@@ -758,8 +859,16 @@
                 </section>
 
                 <section>
-                    <h1>Thank you</h1>
-                    <h2>Questions?</h2>
+                    <h1>Thank you.</h1>
+
+                    <p/>
+                    <p>
+                        <small>
+                            <img style=" background: none; border: none; box-shadow: none; margin:0;" height="25" data-src="img/twitter.png" alt="Twitter"> <a href="https://twitter.com/mirocupak">@mirocupak</a> <a href='https://twitter.com/hashtag/DevConfCZ'>#devconfcz</a>
+                            <br/>
+                            <img style=" background: none; border: none; box-shadow: none; margin:0;" height="25" data-src="img/devconf.png" alt="DevConf.cz"> <a href="http://devconf.cz/f/81">http://devconf.cz/f/81</a>
+                        </small>
+                    </p>
                 </section>
             </div>
         </div>
